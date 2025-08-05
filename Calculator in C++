@@ -1,0 +1,64 @@
+// Basic Calculator in C++ by Zaheen Masood!
+# include <iostream>
+#include <cmath>
+using namespace std;
+double Addition (double a, double b)   // Function for Addition
+{return a + b;}  
+
+double Multiplication (double a, double b)   // Function for Multiplication
+{return a * b;}
+double Division (double a, double b)       // Function for Division
+{return  a / b;}
+double Subtraction (double a, double b)   //// Function for Subtraction
+{return a - b; }  
+
+
+int main(){
+double x,y;
+char operation;
+
+cout<<"Enter the first Number:"<<flush; 
+cin>>x;
+ cout<<endl<<endl;
+cout<<"Enter the Second Number:"<<flush;        // Getting required Input from User
+cin>>y;
+ cout<<endl<<endl;
+cout<<"What operation to perform?"<<endl;
+cin>>operation;
+ cout<<endl<<endl;
+
+switch (operation){
+
+    case '+' :
+
+    cout<<"Addition is: " <<Addition(x,y) <<endl;
+     cout<<endl<<endl;
+    break;
+
+    case '-':
+    cout<< "Subtraction is:  " <<Subtraction(x,y)  <<endl;       // Using Switches for conditionals
+     cout<<endl<<endl;
+    break;
+    
+    case '*':
+    cout<< "Multiplication is:  " <<Multiplication(x,y) <<endl;
+     cout<<endl<<endl;
+    break;
+
+    case '/':
+    if (y==0){
+
+cout<<"Division by Zero is Not Valid: ERROR!"<<endl;
+ cout<<endl<<endl;
+
+}
+    cout<< "Division is:  " <<Division(x,y) <<endl;
+     cout<<endl<<endl;
+    break;
+
+    default:
+    cout<<" PLease Choose a Valid Operator"<<operation <<endl;      // If user puts wrong operation by mistake
+     cout<<endl<<endl;
+}
+return 0;
+}
