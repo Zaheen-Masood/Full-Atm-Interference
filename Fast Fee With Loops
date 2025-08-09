@@ -1,0 +1,87 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(){
+    
+   int credit_hours;
+   int price_per_Credit_hour;
+   int sport_fund = 2000;
+   int university_fund = 3000;
+   int tuition_fee;
+   int total_fee_initial;
+   int government_tax_low;
+   int government_tax_high;
+   int bank_fee;
+   int additional_charges;
+   int wealth_tax;
+   int total_additional_tax_low;
+   int total_additional_tax_high;
+   int total_fee_low;
+   int total_fee_high;
+
+   cout<<"Enter Number of Credit Hours:"<<endl;
+   cin>>credit_hours;
+   cout<<"Enter Price per Credit Hour:"<<endl;
+   cin>>price_per_Credit_hour;
+   cout<<endl<<endl;
+
+   tuition_fee = credit_hours*price_per_Credit_hour;
+   additional_charges = sport_fund + university_fund;
+   total_fee_initial = additional_charges+tuition_fee;
+   government_tax_low = (0.18 * total_fee_initial);
+   wealth_tax = 0.25 * (total_fee_initial-150000);
+   government_tax_high = (0.18 * total_fee_initial) + wealth_tax;
+   bank_fee = (0.2*total_fee_initial);
+   total_additional_tax_low = additional_charges + government_tax_low + bank_fee;
+   total_additional_tax_high = additional_charges + government_tax_high + bank_fee + wealth_tax;
+   total_fee_low = total_fee_initial +total_additional_tax_low;
+   total_fee_high = total_fee_initial +total_additional_tax_high;
+
+ for (total_fee_initial;total_fee_initial < 150000;){
+
+cout<<"There is an 18 % Government Tax, which for your fee is:  "<<government_tax_low<<endl;
+break;
+ }
+for (total_fee_initial;total_fee_initial < 150000;){
+ cout<<endl<<endl;
+   cout<<"1. Tuition fee: "<<tuition_fee<<endl;
+   cout<<"2. Additional Charges to the university: "<< additional_charges <<endl;
+   cout<<"3. Total university fee: "<<total_fee_initial<<endl;
+   cout<<"4. Tax to be paid to the government: "<<government_tax_low<<endl;
+   cout <<"5. No Wealth tax "<<endl; 
+    cout<<"6. Tax to be paid to the bank: "<<bank_fee<<endl;
+   cout<<"7. Total Additional Tax"<<total_additional_tax_low<<endl;
+   cout<< "8. Total Money to be paid:"<<total_fee_low<<endl;
+   cout<<endl<<endl;
+break;
+ }
+
+for (total_fee_initial;total_fee_initial > 150000;){
+
+cout<<"There is 18% and an additional 25% Goverment Tax , which for your fee is:"<<government_tax_high<<endl;
+break;
+ }
+
+
+for (total_fee_initial;total_fee_initial > 150000;){
+ cout<<endl<<endl;
+
+
+ cout<<"1. Tuition fee: "<<tuition_fee<<endl;
+   cout<<"2. Additional Charges to the university: "<< additional_charges <<endl;
+   cout<<"3. Total university fee: "<<total_fee_initial<<endl;
+ cout<<"4. Tax to be paid to the government: "<<government_tax_high<<endl;
+   cout <<"5. Wealth tax: "<<wealth_tax<<endl; 
+    cout<<"6. Tax to be paid to the bank: "<<bank_fee<<endl;
+   cout<<"7. Total Additional Tax: "<<total_additional_tax_high<<endl;
+   cout<< "8. Total Money to be paid: "<<total_fee_high<<endl;
+   cout<<endl<<endl;
+
+break;
+}
+
+
+return 0;
+
+}
