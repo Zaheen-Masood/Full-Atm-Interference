@@ -1,0 +1,40 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+
+ int pin, guess, tries = 1;
+
+ cout<<"Player 1 enter your PIN to be guessed: "<<endl;
+ cin>>pin;
+ cout<<endl<<endl;
+ cout<<"Player 2, you have 3 tries to guess the PIN. Good Luck :)"<<endl;
+ 
+ while(tries < 4){
+
+    cout<<"Enter PIN: "<<endl;
+    cin>>guess;
+
+    if(guess==pin){
+
+        cout<<"Congrats, you got it right!"<<endl;
+        break;
+
+    }else {
+
+        cout<<"Try Again"<<endl;
+        tries++;  
+    
+    }
+
+ }
+
+ if (guess != pin){
+ cout<<"You lost!"<<endl;
+ }
+ return 0;
+
+
+
+}
+
