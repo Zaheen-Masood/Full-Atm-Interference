@@ -1,0 +1,59 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+
+int num;
+char choice;
+
+cout<<"Enter a number till which you want the sequence to execute: "<<endl;
+cin>>num;
+
+cout<<endl;
+
+cout<<"Pick a sequence to execute: "<<endl;
+cout<<"$ -> All Numbers"<<endl;
+cout<<"* -> Even Numbers"<<endl;
+cout<<"& -> Odd Numbers"<<endl;
+cout<<"Enter Choice: "<<endl;
+
+cin>>choice;
+
+cout<<endl<<endl;
+
+
+if(choice=='$'){
+
+for (int i=0;i<=num;i++){
+
+    cout<<" "<<i;
+    
+}
+
+
+}else if(choice=='*'){
+    
+for(int j=0; j<=num; j++ + j++){
+
+    cout<<" "<<j;
+   
+
+}
+
+
+}else if(choice=='&'){
+    
+for(int z=1; z<=num; z++ + z++){
+
+    cout<<" "<<z;
+   
+
+}
+
+}else{
+cout<<"Enter a valid input operator."<<endl;
+
+}
+cout<<endl<<endl;
+return 0;
+}
